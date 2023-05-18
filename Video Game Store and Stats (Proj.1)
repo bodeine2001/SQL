@@ -1,0 +1,27 @@
+-- Create a video game store database
+
+CREATE TABLE video_games (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, violence_level TEXT, rating INTEGER, release_year INTEGER);
+
+INSERT INTO video_games VALUES (1, "God of War", 70, "Extreme", 5, 2018);
+INSERT INTO video_games VALUES (2, "Grand Theft Auto V", 65, "Extreme", 5, 2010);
+INSERT INTO video_games VALUES (3, "Call of Duty 4", 60, "Extreme", 5, 2006);
+INSERT INTO video_games VALUES (4, "Little Nightmares", 55, "Medium", 4, 2015);
+INSERT INTO video_games VALUES (5, "MLB The Show 2022", 50, "None", 3, 2006);
+INSERT INTO video_games VALUES (6, "Sonic the Hedgehog", 50, "Mild", 5, 1997);
+INSERT INTO video_games VALUES (7, "Splinter Cell", 52, "Medium", 4, 1996);
+INSERT INTO video_games VALUES (8, "Madden 94", 45, "None", 4, 1995);
+INSERT INTO video_games VALUES (9, "NHL 94", 48, "Mild", 5, 1995);
+INSERT INTO video_games VALUES (10, "Far Cry 5", 58, "Medium", 4, 2015);
+INSERT INTO video_games VALUES (11, "Call of Duty Black Ops", 47, "Extreme", 5, 2008);
+INSERT INTO video_games VALUES (12, "Resident Evil 4", 35, "Extreme", 5, 1997);
+INSERT INTO video_games VALUES (13, "Atari Classics Vol 1", 25, "Mild", 3, 2003);
+INSERT INTO video_games VALUES (14, "Atari Classics Vol 2", 25, "Mild", 3, 2004);
+INSERT INTO video_games VALUES (15, "Little Big Planet", 20, "None", 3, 1998);
+
+-- Display the store inventory ordered by price (descending) and include attribute (violence level)
+
+SELECT id, name, price, violence_level FROM video_games ORDER by price desc;
+
+-- Sum the total cost of all inventory items in store
+
+SELECT SUM(price) FROM video_games;
