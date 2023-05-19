@@ -4,7 +4,7 @@ CREATE TABLE artists (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
     country TEXT,
-    genre TEXT);
+    genre TEXT); 
 
 INSERT INTO artists (name, country, genre)
     VALUES ("Taylor Swift", "US", "Pop");
